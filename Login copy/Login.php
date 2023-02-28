@@ -21,7 +21,7 @@ include('DataRegister.php');
                 <div class="logo">
                     <img src="a/logo.png" alt="">
                 </div>
-                <header class="h-txt">ลงชื่อเข้าใช้</header>
+                <header class="h-txt">ลงชื่อเข้าใช้ทำไมหรือ</header>
                 <form action="#" method="POST">
                 <div class="error"> <?php echo $error2; ?></div>
                     <div class="field input-field">
