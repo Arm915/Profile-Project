@@ -199,17 +199,59 @@ body{
 }
 /*แก้ตอนไปอีกโหมด*/
 
-.das {
+.content {
     position: fixed;
     z-index: 0;
     margin-left: 86px;
     height: 100vh;
     width: 100%;
-    background-color: aqua;
+    background-color: rgb(211, 211, 211);
 }
 
 @media only screen and (max-width: 500px) {
-    .das {
+    .content {
         margin-left: 20px;
     }
+}
+
+@media only screen and (min-width: 500px) {
+    .profile img{
+        width: 90px;
+        margin: 20px 20px 20px 20px;
+    }
+    
+    .profile .Branch{
+        font-size: 25px;
+    }
+    
+    .profile .Name{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .profile img{
+        width: 70px;
+        margin: 10px 10px 10px 10px;
+    }
+    
+    .profile .Branch{
+        font-size: 15px;
+    }
+    
+    .profile .Name{
+        font-size: 15px;
+    }
+}
+
+.content .top_bar{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background-color: rgb(163, 161, 161);
+}
+
+.profile{
+    display: inline-flex;
+    align-items: center;
 }
