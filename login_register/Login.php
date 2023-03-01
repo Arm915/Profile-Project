@@ -83,7 +83,7 @@ include('DataRegister.php');
         </div>
     </section>
 
-    <script src="Home1.js"></script>
+    <script src="lo_re.js"></script>
 
 </body>
 </html>
