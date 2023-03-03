@@ -38,8 +38,9 @@ include('DataRegister.php');
                     </div>
 
                     <div class="field">
-                    <input class="button-field" type="submit" value="เข้าสู่ระบบ" name="login"> 
+                    <input class="button-field" type="submit" value="เข้าสู่ระบบ" name="login">
                     </div>
+                    
                 </form>
                 <div class="form-link">
                     <span>ไม่มีรหัสผ่าน <a href="#" class="link signup-link">คลิก</a></span>

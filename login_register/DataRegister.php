@@ -82,7 +82,7 @@ $Cpassword = mysqli_real_escape_string($conn, $_POST['Cpassword']);
                         setcookie('id', $row['id'], time() + 60*60*24);
                         }
         
-                        header("Location: Home/Home1.php");
+                        header("Location: http://localhost/Profile-Project-main/Home/Home-art/Home1.html");
         
                     } else {
                         $error2 = "อีเมลหรือรหัสผ่านไม่ถูกต้อง";
