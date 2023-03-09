@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 01, 2023 at 12:33 PM
+-- Generation Time: Mar 10, 2023 at 12:29 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -30,28 +30,35 @@ SET time_zone = "+00:00";
 CREATE TABLE `art` (
   `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `file` date NOT NULL,
-  `picture` date NOT NULL,
-  `data` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `time` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `mont` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `year` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `collect_alltime` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `score` int(50) NOT NULL
+  `file` longblob NOT NULL,
+  `picture` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `timestart` time NOT NULL,
+  `day` date NOT NULL,
+  `collect_alltime` varchar(255) NOT NULL,
+  `score` int(50) NOT NULL,
+  `timeend` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `register`
+-- Table structure for table `regis`
 --
 
-CREATE TABLE `register` (
+CREATE TABLE `regis` (
   `Id` int(11) NOT NULL,
-  `name` text CHARACTER SET utf8 NOT NULL,
-  `email` text CHARACTER SET utf8 NOT NULL,
-  `password` text CHARACTER SET utf8 NOT NULL
+  `username` text NOT NULL,
+  `Email` text NOT NULL,
+  `Pass` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `regis`
+--
+
+INSERT INTO `regis` (`Id`, `username`, `Email`, `Pass`) VALUES
+(22, 'Jeeradech ', 'arm_915@hotmail.co.th', '$2y$10$2QsVWkQqrnlDywkgRs5Zy.GN9rmccNpJW3qWAPJc6BFOOBvVKj9dy'),
+(23, 'Jeeradech ', 'arm_15@hotmail.co.th', '$2y$10$GlgivFPOBur7OTcjrsG27eUlCIqspUuOPTfh8fTuV2SINxo1ctatK');
 
 -- --------------------------------------------------------
 
@@ -120,9 +127,9 @@ ALTER TABLE `art`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `register`
+-- Indexes for table `regis`
 --
-ALTER TABLE `register`
+ALTER TABLE `regis`
   ADD PRIMARY KEY (`Id`);
 
 --
@@ -151,13 +158,13 @@ ALTER TABLE `teach`
 -- AUTO_INCREMENT for table `art`
 --
 ALTER TABLE `art`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
--- AUTO_INCREMENT for table `register`
+-- AUTO_INCREMENT for table `regis`
 --
-ALTER TABLE `register`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `regis`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `research`
