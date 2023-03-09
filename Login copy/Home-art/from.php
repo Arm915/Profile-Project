@@ -1,5 +1,10 @@
+<?php 
+
+include('DataRegister.php'); 
+
+?>
+
 <!DOCTYPE html>
-<!--=== Coding by CodingLab | www.codinglabweb.com === -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,7 +52,6 @@
                         </div>
                         <button class="sumbit">
                             <span class="btnText">Submit</span>
-
                     </div>
                 </div>
             </div>
