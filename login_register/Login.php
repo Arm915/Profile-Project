@@ -25,11 +25,11 @@ include('DataRegister.php');
                 <form action="#" method="POST">
                 <div class="error"> <?php echo $error2; ?></div>
                     <div class="field input-field">
-                        <input type="email" placeholder="Email" class="input" name="email">
+                        <input type="email" placeholder="Email" class="input" name="email" required>
                     </div>
 
                     <div class="field input-field">
-                        <input type="password" placeholder="Password" class="password" name="password">
+                        <input type="password" placeholder="Password" class="password" name="password" required>
                         <i class='bx bx-hide eye-icon'></i>
                     </div>
 
@@ -57,18 +57,18 @@ include('DataRegister.php');
                 <form action="#" method="POST">
                 <div class="error"> <?php echo $error; ?></div>
                     <div class="field input-field">
-                        <input type="username" placeholder="username" class="input" name="name">
+                        <input type="username" placeholder="username" class="input" name="name" required>
                     </div>
                     <div class="field input-field">
-                        <input type="email" placeholder="Email" class="input" name="email">
-                    </div>
-
-                    <div class="field input-field">
-                        <input type="password" placeholder="Create password" class="password" name="password">
+                        <input type="email" placeholder="Email" class="input" name="email" required>
                     </div>
 
                     <div class="field input-field">
-                        <input type="password" placeholder="Confirm password" class="password" name="Cpassword">
+                        <input type="password" placeholder="Create password" class="password" name="password" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Confirm password" class="password" name="Cpassword" required>
                         <i class='bx bx-hide eye-icon'></i>
                     </div>
 

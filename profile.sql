@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2023 at 12:29 AM
+-- Generation Time: May 03, 2023 at 05:31 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -28,15 +28,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `art` (
-  `id` int(11) NOT NULL,
+  `Id` int(50) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 NOT NULL,
   `file` longblob NOT NULL,
   `picture` varchar(255) CHARACTER SET utf8 NOT NULL,
   `timestart` time NOT NULL,
   `day` date NOT NULL,
-  `collect_alltime` varchar(255) NOT NULL,
+  `collect_alltime` varchar(255) CHARACTER SET utf8 NOT NULL,
   `score` int(50) NOT NULL,
-  `timeend` time NOT NULL
+  `timeend` time NOT NULL,
+  `Id_identity` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -46,19 +47,11 @@ CREATE TABLE `art` (
 --
 
 CREATE TABLE `regis` (
-  `Id` int(11) NOT NULL,
-  `username` text NOT NULL,
-  `Email` text NOT NULL,
-  `Pass` text NOT NULL
+  `Id` int(50) NOT NULL,
+  `username` text CHARACTER SET utf8 NOT NULL,
+  `Email` text CHARACTER SET utf8 NOT NULL,
+  `Pass` text CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `regis`
---
-
-INSERT INTO `regis` (`Id`, `username`, `Email`, `Pass`) VALUES
-(22, 'Jeeradech ', 'arm_915@hotmail.co.th', '$2y$10$2QsVWkQqrnlDywkgRs5Zy.GN9rmccNpJW3qWAPJc6BFOOBvVKj9dy'),
-(23, 'Jeeradech ', 'arm_15@hotmail.co.th', '$2y$10$GlgivFPOBur7OTcjrsG27eUlCIqspUuOPTfh8fTuV2SINxo1ctatK');
 
 -- --------------------------------------------------------
 
@@ -67,15 +60,15 @@ INSERT INTO `regis` (`Id`, `username`, `Email`, `Pass`) VALUES
 --
 
 CREATE TABLE `research` (
-  `id` int(11) NOT NULL,
+  `Id` int(50) NOT NULL,
+  `name_Research` text CHARACTER SET utf8 NOT NULL,
+  `time__Research` text CHARACTER SET utf8 NOT NULL,
   `data_Research` text CHARACTER SET utf8 NOT NULL,
-  `time_Research` text CHARACTER SET utf8 NOT NULL,
-  `month_Research` text CHARACTER SET utf8 NOT NULL,
-  `year_Research` text CHARACTER SET utf8 NOT NULL,
+  `month_Research` text NOT NULL,
+  `year_Research` text NOT NULL,
   `collect_budget` text NOT NULL,
   `howmuch_budget` text NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `file` date NOT NULL
+  `file` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -85,14 +78,14 @@ CREATE TABLE `research` (
 --
 
 CREATE TABLE `service` (
-  `Id` int(11) NOT NULL,
-  `name_subject` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `file` date NOT NULL,
-  `picture` date NOT NULL,
-  `Data_service` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `time_service` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `month_service` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `year_service` varchar(255) CHARACTER SET utf8 NOT NULL
+  `Id` int(50) NOT NULL,
+  `name_subject` text NOT NULL,
+  `time_service` text NOT NULL,
+  `Data_service` text NOT NULL,
+  `month_service` text NOT NULL,
+  `year_service` text NOT NULL,
+  `picture` text NOT NULL,
+  `file` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -102,19 +95,12 @@ CREATE TABLE `service` (
 --
 
 CREATE TABLE `teach` (
-  `Id` int(11) NOT NULL,
-  `name_subject` text CHARACTER SET utf8 NOT NULL,
-  `start_teach_time` varchar(50) NOT NULL,
-  `end_teach_time` varchar(50) NOT NULL,
-  `collect_time_teach` varchar(50) NOT NULL
+  `Id` int(50) NOT NULL,
+  `name_subject` text NOT NULL,
+  `start_teach_time` text NOT NULL,
+  `end_teach_time` text NOT NULL,
+  `collect_time_teach` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `teach`
---
-
-INSERT INTO `teach` (`Id`, `name_subject`, `start_teach_time`, `end_teach_time`, `collect_time_teach`) VALUES
-(1, 'sd', '11.30', '12.30', '1');
 
 --
 -- Indexes for dumped tables
@@ -124,7 +110,7 @@ INSERT INTO `teach` (`Id`, `name_subject`, `start_teach_time`, `end_teach_time`,
 -- Indexes for table `art`
 --
 ALTER TABLE `art`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`Id`);
 
 --
 -- Indexes for table `regis`
@@ -136,7 +122,7 @@ ALTER TABLE `regis`
 -- Indexes for table `research`
 --
 ALTER TABLE `research`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`Id`);
 
 --
 -- Indexes for table `service`
@@ -158,31 +144,31 @@ ALTER TABLE `teach`
 -- AUTO_INCREMENT for table `art`
 --
 ALTER TABLE `art`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `regis`
 --
 ALTER TABLE `regis`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `research`
 --
 ALTER TABLE `research`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `teach`
 --
 ALTER TABLE `teach`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
