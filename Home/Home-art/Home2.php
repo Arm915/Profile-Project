@@ -82,7 +82,7 @@
     <nav class="content">
       <div class="top_bar">
         <div class="profile">
-          <img src="getstudentimage.jpg" alt="profile" />
+          <img src="" alt="profile" />
           <div>
             <h1 class="Name">นาย.จีรเดช วงษ์ขำ</h1>
             <h1 class="Branch">สาขา.วิทยาการคอมพิวเตอร์</h1>

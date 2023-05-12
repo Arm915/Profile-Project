@@ -6,9 +6,6 @@ if (!isset($_SESSION['Id'])) {
     header("Location: http://localhost/Profile-Project-main/login_register/Login.php");
     exit();
 }
-
-$Id_identity = $_SESSION['Id'];
-
 ?>
 
 <?php 
