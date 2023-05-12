@@ -83,7 +83,7 @@ if (array_key_exists("login", $_POST)) {
                     setcookie('Id', $row['Id'], time() + 60*60*24);
                     }
     
-                    header("Location: http://localhost/Profile-Project-main/Home/Home-art/Home2.php");
+                    header("Location: http://localhost/Profile-Project-main/Home/Home-art/HomeArt.php");
     
                 } else {
                     $error2 = "อีเมลหรือรหัสผ่านไม่ถูกต้อง";

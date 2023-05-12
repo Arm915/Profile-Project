@@ -6,6 +6,9 @@ if (!isset($_SESSION['Id'])) {
     header("Location: http://localhost/Profile-Project-main/login_register/Login.php");
     exit();
 }
+
+$Id_identity = $_SESSION['Id'];
+
 ?>
 
 <?php 
@@ -34,7 +37,7 @@ if (array_key_exists("submit1", $_POST)) {
             VALUES ('$name', '$file', '$picture', '$timestart', '$day', '$hour_diff:$minute_diff:00', '$score', '$timeend', '$Id_identity')";
 
     if (mysqli_query($conn, $sql)) {
-        header("Location: Home2.php");  
+        header("Location: HomeArt.php");  
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
