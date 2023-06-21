@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2023 at 05:31 PM
+-- Generation Time: Jun 21, 2023 at 06:23 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -47,9 +47,12 @@ CREATE TABLE `art` (
 --
 
 CREATE TABLE `regis` (
-  `Id` int(50) NOT NULL,
+  `Id` int(10) NOT NULL,
   `username` text CHARACTER SET utf8 NOT NULL,
-  `Email` text CHARACTER SET utf8 NOT NULL,
+  `surname` text CHARACTER SET utf8 NOT NULL,
+  `email` text CHARACTER SET utf8 NOT NULL,
+  `rank` text CHARACTER SET utf8 NOT NULL,
+  `branch` text CHARACTER SET utf32 NOT NULL,
   `Pass` text CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -144,13 +147,13 @@ ALTER TABLE `teach`
 -- AUTO_INCREMENT for table `art`
 --
 ALTER TABLE `art`
-  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `regis`
 --
 ALTER TABLE `regis`
-  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `research`

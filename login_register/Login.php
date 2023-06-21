@@ -10,7 +10,7 @@ include('DataRegister.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="Logina.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
                     
 </head>
@@ -56,8 +56,25 @@ include('DataRegister.php');
                 <header class="h-txt">สมัคสมาชิค</header>
                 <form action="#" method="POST">
                 <div class="error"> <?php echo $error; ?></div>
+                    <div class="inputcombo">
+                        <select id="cars1" name="rank">
+                            <option value="volvo" selected>ตำแหน่ง</option>
+                            <option value="saab">Saab</option>
+                            <option value="vw">VW</option>
+                            <option value="audi" >ตำแหน่ง</option>
+                        </select>
+                        <select id="cars2" name="branch">
+                            <option value="volvo" selected>สาขา</option>
+                            <option value="saab">Saab</option>
+                            <option value="vw">VW</option>
+                            <option value="audi" >คณะ</option>
+                        </select>
+                    </div>
                     <div class="field input-field">
-                        <input type="username" placeholder="username" class="input" name="name" required>
+                        <input type="username" placeholder="ชื่อจริง" class="input" name="name" required>
+                    </div>
+                    <div class="field input-field">
+                        <input type="surname" placeholder="นามสกุล" class="input" name="surname" required>
                     </div>
                     <div class="field input-field">
                         <input type="email" placeholder="Email" class="input" name="email" required>
