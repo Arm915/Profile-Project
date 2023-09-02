@@ -27,7 +27,7 @@
               <form name="search" method="GET" onsubmit="return validateSearchForm()">
               <input type="search" class="input" name="txt" id="searchInput" placeholder="ค้นหา..." value="<?php echo isset($_GET['txt']) ? $_GET['txt'] : ''; ?>">
               <button type="submit" class="button1"><i class="bx bxs-chevrons-right right-arrow toggle2"></i></button>
-              <a href="Admin-from-Login-N.php" class="button2">เพิ่มข้อมูล</a>
+              <a href="Admin-from-Login-H.php" class="button2">เพิ่มข้อมูล</a>
             </form>
           </div>
         </h4>
