@@ -16,7 +16,7 @@ include('DataRegister.php');
 <body>
     <div class="container">
         <header>ID : </header>
-    <form action="DataRegister.php" method="POST">
+    <form action="" method="POST">
         <div class="form first">
             <div class="details personal">
                 <span class="title">เพิ่มบัญชีเยี่ยมชม</span>
