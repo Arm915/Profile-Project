@@ -30,13 +30,13 @@ body{
 
 .logo{
     position: absolute;
-    left: 38%;
-    top: -11%;
+    left: 42%;
+    top: 1%;
 } 
 
 .logo img{
-    width: 50%;
-    height: 50%;
+    width: 35%;
+    height: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,15 +61,21 @@ body{
 .forms.show-signup .form.signup{
     opacity: 1;
     pointer-events: auto;
-    height: 700px;
+    height: 630px;
+    overflow-y: scroll;
 }
+
+.form.signup::-webkit-scrollbar {
+    width: 0px;
+    }
+
 .forms.show-signup .form.login{
     opacity: 0;
     pointer-events: none;
 }
 
 .h-txt{
-    padding: 60px 0px 20px 0px;
+    padding: 70px 0px 20px 0px;
     font-size: 28px;
     font-weight: 600;
     color: #000000;
@@ -83,6 +89,52 @@ body{
     margin-top: 20px;
     border-radius: 6px;
 }
+
+.inputcombo select[id=cars1] {
+    height: 50px;
+    width: 110px;
+    border: none;
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+    background-color: rgb(231, 231, 231);
+    transition: all 0.5s ease;
+    padding: 0 10px;
+    color: #8b8b8b;
+}
+.inputcombo select[id=cars2] {
+    height: 50px;
+    width: 90px;
+    border: none;
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+    background-color: rgb(231, 231, 231);
+    transition: all 0.5s ease;
+    padding: 0 10px;
+    color: #8b8b8b;
+}
+
+.inputcombo select[id=cars1]:hover{
+    background-color: rgb(187, 187, 187);
+}
+.inputcombo select[id=cars1]:focus{
+    outline: 1px solid rgb(187, 187, 187);
+    border-bottom-width: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+.inputcombo select[id=cars2]:hover{
+    background-color: rgb(187, 187, 187);
+}
+.inputcombo select[id=cars2]:focus{
+    outline: 1px solid rgb(187, 187, 187);
+    border-bottom-width: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
 .field input,
 .field button{
     height: 50px;
@@ -107,6 +159,7 @@ body{
     border-bottom-width: 2px;
     background-color: rgb(255, 255, 255);
 }
+
 .eye-icon{
     position: absolute;
     top: 50%;
